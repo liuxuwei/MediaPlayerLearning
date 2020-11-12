@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private fun initListener() {
         btn_play.setOnClickListener(this)
         btn_init.setOnClickListener(this)
+        btn_surface.setOnClickListener(this)
     }
 
     private fun initMediaPlayer() {
@@ -55,14 +56,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         mIntent = Intent(this, PlayService::class.java)
-        if (v?.id == R.id.btn_play) {
-            LogUtil.d("onClick btn ")
-            mIntent.action = PlayConstants.ACTION_PLAY
-        }else if (v?.id == R.id.btn_init) {
-            mIntent.action = PlayConstants.ACTION_INIT
+        when (v?.id) {
+            R.id.btn_play -> {
+                mIntent.action = PlayConstants.ACTION_PLAY
+                mIntent.setPackage("com.example.medialearnapp")
+                startService(mIntent)
+            }
+            R.id.btn_init -> {
+                mIntent.action = PlayConstants.ACTION_INIT
+                mIntent.setPackage("com.example.medialearnapp")
+                startService(mIntent)
+            }
+            R.id.btn_surface -> {
+                startActivity(Intent(this@MainActivity, SurfaceActivity::class.java))
+            }
         }
-        mIntent.setPackage("com.example.medialearnapp")
-        startService(mIntent)
+
     }
 
     override fun onDestroy() {
