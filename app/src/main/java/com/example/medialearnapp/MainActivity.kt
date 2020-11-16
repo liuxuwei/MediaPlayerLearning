@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.MutableLiveData
 import kotlinx.android.synthetic.main.activity_main.*
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_play.setOnClickListener(this)
         btn_init.setOnClickListener(this)
         btn_surface.setOnClickListener(this)
+        btn_audio_record.setOnClickListener(this)
     }
 
     private fun initMediaPlayer() {
@@ -69,6 +71,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_surface -> {
                 startActivity(Intent(this@MainActivity, SurfaceActivity::class.java))
+            }
+            R.id.btn_audio_record -> {
+                startActivity(Intent(this@MainActivity, AudioRecordActivity::class.java))
             }
         }
 

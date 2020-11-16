@@ -3,6 +3,8 @@
     package="com.example.medialearnapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MediaLearnApp"
         android:usesCleartextTraffic="true">
-        <activity android:name=".SurfaceActivity"></activity>
+        <activity android:name=".AudioRecordActivity"></activity>
+        <activity android:name=".SurfaceActivity" />
 
         <service android:name=".PlayService" />
 

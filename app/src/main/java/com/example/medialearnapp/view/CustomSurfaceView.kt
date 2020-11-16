@@ -11,10 +11,10 @@ import com.example.medialearnapp.R
 import java.lang.Exception
 
 class CustomSurfaceView @JvmOverloads constructor(
-    context: Context,
-    attr: AttributeSet? = null,
-    defaultStyleAttr: Int = 0
-) : SurfaceView(context, attr, defaultStyleAttr), SurfaceHolder.Callback, Runnable {
+    private val mContext: Context,
+    private val attr: AttributeSet? = null,
+    private val defaultStyleAttr: Int = 0
+) : SurfaceView(mContext, attr, defaultStyleAttr), SurfaceHolder.Callback, Runnable {
     private lateinit var mSurfaceHolder: SurfaceHolder
 
     private lateinit var mCanvas: Canvas

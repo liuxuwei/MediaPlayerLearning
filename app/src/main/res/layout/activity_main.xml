@@ -25,4 +25,16 @@
         android:layout_height="wrap_content"
         android:text="start SurfaceActivity" />
 
+    <Button
+        android:id="@+id/btn_audio_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start AudioRecordActivity" />
+
+    <com.example.medialearnapp.view.CircleImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="50dp"
+        android:src="@drawable/heart" />
+
 </LinearLayout>
