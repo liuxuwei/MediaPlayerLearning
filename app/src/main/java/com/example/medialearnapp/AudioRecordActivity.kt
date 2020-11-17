@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.annotation.RequiresApi
 import com.example.medialearnapp.audio.AudioRecordManager
+import com.example.medialearnapp.audio.AudioTrackManager
 import kotlinx.android.synthetic.main.activity_audio_record.*
 import java.util.*
 
@@ -32,11 +33,13 @@ class AudioRecordActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun initRecordConfig() {
         AudioRecordManager.initConfig()
+        AudioTrackManager.initConfig()
     }
 
     private fun initListener() {
         btn_start_record.setOnClickListener(this)
         btn_stop_record.setOnClickListener(this)
+        btn_play.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -46,6 +49,9 @@ class AudioRecordActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_stop_record -> {
                 AudioRecordManager.stopRecord()
+            }
+            R.id.btn_play -> {
+                AudioTrackManager.play(externalCacheDir?.path + "/test1.pcm")
             }
         }
     }

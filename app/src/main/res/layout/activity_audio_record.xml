@@ -18,4 +18,11 @@
         android:layout_height="wrap_content"
         android:text="stop Record" />
 
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="play pcm"/>
+
+
 </LinearLayout>

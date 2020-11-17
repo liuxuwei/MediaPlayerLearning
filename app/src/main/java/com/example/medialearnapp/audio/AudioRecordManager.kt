@@ -72,9 +72,9 @@ object AudioRecordManager {
             val file = File(mOutputFilePath)
             if (!file.exists()) {
                 LogUtil.d("mkdir === ")
-                val Randomfile = RandomAccessFile(file, "rwd")
+                file.createNewFile()
+                mRecordThread!!.start()
             }
-            mRecordThread!!.start()
         } catch (e: Exception) {
             LogUtil.d("start record exception ${e.message}")
         }
