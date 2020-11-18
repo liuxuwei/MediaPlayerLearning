@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MediaLearnApp"
         android:usesCleartextTraffic="true">
-        <activity android:name=".AudioRecordActivity"></activity>
+        <activity android:name=".VideoPlayActivity"></activity>
+        <activity android:name=".AudioRecordActivity" />
         <activity android:name=".SurfaceActivity" />
 
         <service android:name=".PlayService" />
