@@ -8,13 +8,15 @@
 
     <application
         android:allowBackup="true"
+        android:name=".App"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MediaLearnApp"
         android:usesCleartextTraffic="true">
-        <activity android:name=".VideoPlayActivity"></activity>
+        <activity android:name=".ExoPlayActivity"></activity>
+        <activity android:name=".VideoPlayActivity" />
         <activity android:name=".AudioRecordActivity" />
         <activity android:name=".SurfaceActivity" />
 

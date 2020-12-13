@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_surface.setOnClickListener(this)
         btn_audio_record.setOnClickListener(this)
         btn_video_activity.setOnClickListener(this)
+        btn_exo_player.setOnClickListener(this)
     }
 
     private fun initMediaPlayer() {
@@ -78,6 +79,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_video_activity -> {
                 startActivity(Intent(this@MainActivity, VideoPlayActivity::class.java))
+            }
+            R.id.btn_exo_player -> {
+                startActivity(Intent(this@MainActivity, ExoPlayActivity::class.java))
             }
         }
 
